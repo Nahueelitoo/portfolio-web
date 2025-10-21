@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nahuel Inguanta | Portafolio Web</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="particles-hover"></div>
+
+  <!-- Header fijo -->
+  <header class="site-header" role="banner">
+  <div class="header-inner">
+    <div class="name">
+      <h1>Nahuel Inguanta</h1>
+      <p class="roles">Desarrollador Web • QA Tester • Game Developer • Data Analyst</p>
+    </div>
+
+    <div class="contact-mini">
+      <!-- Editá estos enlaces con tus datos reales -->
+      <a href="mailto:nahuelinguanta@gmail.com" title="Email">✉️ nahuelinguanta@gmail.com</a>
+      <span class="sep">•</span>
+      <a href="https://www.linkedin.com/in/nahuel-inguanta-13bb0a179" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">•</span>
+      <a href="https://github.com/Nahueelitoo" target="_blank" rel="noopener">GitHub</a>
+      <div><small>La Plata, AR • 29 Años • Inglés B2</small></div>
+    </div>
+  </div>
+</header>
+
+  <!-- espacio de compensación para el header fijo -->
+  <main class="page-offset">
+    <!-- Lista de proyectos (cada franja full-width) -->
+    <section class="projects-list">
+
+      <div class="project" data-link="./proyectos/barssaty.html" aria-role="button" tabindex="0">
+        <div class="project-content">
+          <h2>Barssaty Pastelería</h2>
+          <p><span class="label">Tipo:</span> Página web + Base de datos + Sistema de venta</p>
+          <p><span class="label">Descripción:</span> Sitio web para publicar y vender productos de pastelería. Incluye gestión de stock y precios.</p>
+          <p><span class="label">Tecnologías:</span> PostgreSQL, HTML/CSS, JS, VS Code</p>
+          <p><span class="label">Aporte:</span> Incremento notable en las ventas mensuales.</p>
+          <p><span class="label">Link:</span> No disponible por uso interno.</p>
+        </div>
+          <img src="Images/logo.jpeg" alt="Vista previa del proyecto Barssaty">
+      </div>
+
+      <div class="project" data-link="proyectos/servidor245.html" aria-role="button" tabindex="0">
+        <div class="project-content">
+          <h2>Servidor 245</h2>
+          <p><span class="label">Tipo:</span> Servidor local migrado</p>
+          <p><span class="label">Descripción:</span> Migración de servidor antiguo a uno moderno mejorando rendimiento e interfaz.</p>
+          <p><span class="label">Tecnologías:</span> PHP 7.4.33, MySQL, XAMPP, Apache, HTML, CSS, JS</p>
+          <p><span class="label">Aporte:</span> Rediseño visual y mejora de rendimiento general.</p>
+        </div>
+      </div>
+
+      <div class="project" data-link="proyectos/mythwarriors.html" aria-role="button" tabindex="0">
+        <div class="project-content">
+          <h2>Myth Warriors</h2>
+          <p><span class="label">Tipo:</span> Juego 2D - HTML</p>
+          <p><span class="label">Descripción:</span> Juego por turnos creado para practicar lógicas y aleatoriedad.</p>
+        </div>
+      </div>
+
+      <div class="project" data-link="proyectos/pruebagame.html" aria-role="button" tabindex="0">
+        <div class="project-content">
+          <h2>Prueba Game 2D</h2>
+          <p><span class="label">Tipo:</span> Juego 2D - Unity</p>
+          <p><span class="label">Descripción:</span> Juego de escape con trampas y enemigos en laberinto peligroso.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Nahuel Inguanta - Todos los derechos reservados.
+  </footer>
+
+  <!-- overlay que carga el proyecto dentro de la misma pestaña -->
+  <div id="project-overlay" class="overlay" aria-hidden="true">
+    <button id="overlay-close" class="overlay-close" aria-label="Cerrar proyecto">✕</button>
+    <div class="overlay-bg"></div> <!-- Nebulosa/efecto -->
+    <div class="overlay-content" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="javascript/particles-config.js"></script>
+  <script src="javascript/main.js"></script>
+  <div class="project-overlay"></div>
+</body>
+</html>
