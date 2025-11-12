@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barssaty Pastelería | Nahuel Inguanta</title>
-  <link rel="stylesheet" href="css/barssaty.css" />
+  <link rel="stylesheet" href="/Css/proyecto.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Barssaty Pastelería — Caso</title>
+  <!-- No es estrictamente necesario enlazar css global; el overlay ya tiene estilos.
+       Pero podemos usar un CSS específico para proyectos. -->  
 </head>
 <body>
-  <a href="./index.html">&larr; Volver al portafolio</a>
-  <h1>Barssaty Pastelería</h1>
-  <p><strong>Tipo:</strong> Página web + Base de datos + Sistema de venta</p>
-  <p><strong>Descripción:</strong> Página para publicar productos y venderlos con gestión de stock.</p>
-  <p><strong>Tecnologías:</strong> PostgreSQL, HTML/CSS, JS, VS Code</p>
-  <p><strong>Aporte:</strong> Aumento de ventas mensual.</p>
-  <p><strong>Link:</strong> No disponible.</p>
-  <footer>
-    © 2025 Nahuel Inguanta & ChatGPT - Todos los derechos reservados.
-  </footer>
+  <main class="project-page">
+    <header class="project-hero">
+      <div class="hero-left">
+        <h1>Barssaty Pastelería</h1>
+        <p class="subtitle">Página web + Base de datos + Sistema de venta</p>
+        <p class="lead">Breve descripción: sistema de catálogo y gestión de ventas para comercio local.</p>
+
+        <div class="meta">
+          <span><strong>Tecnologías:</strong> PostgreSQL · PHP · HTML · JS</span>
+          <span><strong>Rol:</strong> Desarrollo full-stack · DB admin</span>
+        </div>
+
+        <div class="links">
+          <a class="btn" href="javascript:void(0)" target="_blank" rel="noopener">Ver página web (En Vivo)</a>
+          <a class="btn ghost" href="https://github.com/Nahueelitoo/backup_databaseBP" target="_blank" rel="noopener">Repositorio (GitHub)</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="/Images/logo.jpeg" alt="Barssaty - captura 1" />
+      </div>
+    </header>
+
+    <section class="gallery">
+      <h2>Capturas destacadas</h2>
+      <div class="grid">
+        <img src="/Images/projects/barssaty/cheesecake.jpeg" alt="captura 1">
+        <img src="/img/projects/barssaty/barssaty2.jpg" alt="captura 2">
+        <img src="/img/projects/barssaty/barssaty3.jpg" alt="captura 3">
+      </div>
+    </section>
+
+    <section class="details">
+      <h2>Descripción completa</h2>
+      <p>Aquí redactás el flujo del proyecto, retos, soluciones técnicas, queries importantes, índices, etc.</p>
+
+      <h3>Base de datos (ejemplo)</h3>
+      <pre>
+-- Ejemplo de tabla productos
+CREATE TABLE productos (
+  id SERIAL PRIMARY KEY,
+  nombre TEXT NOT NULL,
+  precio NUMERIC(10,2),
+  stock INT DEFAULT 0
+);
+      </pre>
+    </section>
+  </main>
 </body>
 </html>
-
-
- 

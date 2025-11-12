@@ -1,0 +1,86 @@
+/* css/proyecto.css */
+:root {
+  --bg: #090017;
+  --muted: #cfc7ff;
+  --accent: #c084fc;
+  --panel: rgba(10,7,20,0.6);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, rgba(6,4,10,0.95), rgba(3,1,8,0.98));
+  color: var(--muted);
+  background: url("../Images/nebula.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.project-page {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1.2rem;
+}
+
+.project-hero {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--panel);
+  padding: 1.6rem;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+.hero-left { flex: 1; }
+.hero-right { width: 360px; flex-shrink: 0; text-align: right; }
+.hero-right img { width: 100%; border-radius: 10px; box-shadow: 0 8px 30px rgba(160,80,255,0.18); }
+
+h1 { font-size: 2.2rem; color: var(--accent); margin: 0 0 0.25rem; }
+.subtitle { color: #a88cff; margin: 0 0 0.8rem; }
+.lead { margin-bottom: 1rem; color: #e9e0ff; }
+
+.meta span { display: inline-block; margin-right: 1rem; font-size: .95rem; color: #e6dcff; }
+
+.links { margin-top: 1rem; display:flex; gap:0.8rem; flex-wrap:wrap; }
+.btn { display:inline-block; padding: .6rem .9rem; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; }
+.btn.ghost { background: transparent; border:1px solid rgba(200,170,255,0.12); color:var(--muted); }
+
+.gallery {
+  margin-top: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  justify-items: center;
+}
+
+.grid img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(120, 70, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(160, 100, 255, 0.6);
+}
+
+
+.details { margin-top:1.8rem; background: rgba(5,3,10,0.35); padding:1rem; border-radius:10px; }
+pre { background: rgba(10,8,16,0.5); padding: .8rem; border-radius:8px; overflow:auto; color:#e7defb; }
+
+section {
+  margin-top: 2.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+section:last-of-type {
+  border: none;
+}

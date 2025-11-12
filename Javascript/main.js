@@ -13,19 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function sanitizeAndInject(doc) {
-    // removemos header/nav/footer y links 'volver' o index
-    ['header','nav','footer'].forEach(sel => {
-      const el = doc.querySelector(sel);
-      if (el) el.remove();
-    });
-    Array.from(doc.querySelectorAll('a')).forEach(a => {
-      const href = a.getAttribute('href') || '';
-      const txt = (a.textContent || '').toLowerCase();
-      if (/index\.html/.test(href) || /volver|back to|volver al portfolio/i.test(txt)) a.remove();
-    });
-    Array.from(doc.querySelectorAll('script')).forEach(s => s.remove());
-    return doc.body ? doc.body.innerHTML : doc.documentElement.innerHTML;
-  }
+  // Eliminamos enlaces de "volver" o index, pero dejamos header/nav/footer
+  Array.from(doc.querySelectorAll('a')).forEach(a => {
+    const href = a.getAttribute('href') || '';
+    const txt = (a.textContent || '').toLowerCase();
+    if (/index\.html/.test(href) || /volver|back to|volver al portfolio/i.test(txt)) a.remove();
+  });
+  Array.from(doc.querySelectorAll('script')).forEach(s => s.remove());
+  return doc.body ? doc.body.innerHTML : doc.documentElement.innerHTML;
+}
 
   function openOverlayFrom(projectEl, url, clickX, clickY) {
     const cx = (clickX / window.innerWidth) * 100 + '%';
