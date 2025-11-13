@@ -14,12 +14,14 @@
     <header class="project-hero">
       <div class="hero-left">
         <h1>Barssaty Pastelería</h1>
-        <p class="subtitle">Página web + Base de datos + Sistema de venta</p>
-        <p class="lead">Breve descripción: sistema de catálogo y gestión de ventas para comercio local.</p>
+        <p class="subtitle">Página web + Sistema de venta y creación de pedidos.</p>
+        <p class="lead">Página completamente funcional, con stock, precios y fotos del catálogo. Gestión de ventas para comercio local,
+          permitiendo al cliente visualizar los productos en stock y hacer pedidos directamente desde la página.
+        </p>
 
         <div class="meta">
-          <span><strong>Tecnologías:</strong> PostgreSQL · PHP · HTML · JS</span>
-          <span><strong>Rol:</strong> Desarrollo full-stack · DB admin</span>
+          <span><strong>Tecnologías:</strong>HTML - JavaScript - CSS - API´s</span>
+          <span><strong>Rol:</strong> Desarrollo Full Stack / Gestor de Venta</span>
         </div>
 
         <div class="links">
@@ -29,33 +31,33 @@
       </div>
 
       <div class="hero-right">
-        <img src="/Images/logo.jpeg" alt="Barssaty - captura 1" />
+        <img src="../Images/logo.jpeg" alt="Barssaty - captura 1" />
       </div>
     </header>
 
-    <section class="gallery">
+    <section class="highlights">
       <h2>Capturas destacadas</h2>
-      <div class="grid">
-        <img src="/Images/projects/barssaty/cheesecake.jpeg" alt="captura 1">
-        <img src="/img/projects/barssaty/barssaty2.jpg" alt="captura 2">
-        <img src="/img/projects/barssaty/barssaty3.jpg" alt="captura 3">
+      <div class="highlight-gallery">
+        <img src="../Images/projects/barssaty/inicio.png" alt="captura 1">
+        <img src="../Images/projects/barssaty/productos.png" alt="captura 2">
+        <img src="../Images/projects/barssaty/arma_tu_pedido.png" alt="captura 3">
+        <img src="../Images/projects/barssaty/botones_footer.png" alt="captura 4">
+        <img src="../Images/projects/barssaty/pedir_producto.png" alt="captura 5">
+        <img src="../Images/projects/barssaty/visualizacion_imagen.png" alt="captura 6">
       </div>
     </section>
 
     <section class="details">
       <h2>Descripción completa</h2>
-      <p>Aquí redactás el flujo del proyecto, retos, soluciones técnicas, queries importantes, índices, etc.</p>
-
-      <h3>Base de datos (ejemplo)</h3>
-      <pre>
--- Ejemplo de tabla productos
-CREATE TABLE productos (
-  id SERIAL PRIMARY KEY,
-  nombre TEXT NOT NULL,
-  precio NUMERIC(10,2),
-  stock INT DEFAULT 0
-);
-      </pre>
+      <p>Página web para Barssaty Pastelería, una pastelería de la ciudad de La Plata, en la cuál se puede visualizar todo el stock y todos los artículos que la misma ofrece.
+        La página es completamente funcional, desde apertura de fotos para ver la calidad de las tortas, botones interactivos, los cuáles ya tienen un mensaje pre-armado
+        para consultar ya sea stock disponible o por disponibilidad para X día.</p>
+      <p>También cuenta con dos botones (uno de Instagram y otro de WhatsApp), interactivos, los cuáles te llevan a sus respectivas redes. Cuatro pestañas muy llamativas
+        a la vista del cliente. El inicio el cual tiene los artículos más vendidos. Los productos, dónde el usuario puede visualizar todos los precios y stock de los artículos
+        en venta (cada uno con su botón para hacer el pedido sin escribir un solo caracter). La página de información, dónde se detallan varios puntos importantes para
+        realizar los pedidos, la seña, entre otras cosas. Y por último, el "Armá tu pedido", dónde tienes dos opciones para solicitar una torta personalizada (la cuál suele ser
+        la más pedida y vendida por la pastelería) y la de productos generales, como pueden ser alfajores, galletitas, budines, etc.</p>
+      <p>Cuenta también con un botón de "Pagá tu seña con Mercado Pago", el cuál no está disponible aún ya que no lanzamos la página a ningún dominio todavía.</p>
     </section>
   </main>
 </body>

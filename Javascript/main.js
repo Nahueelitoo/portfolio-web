@@ -89,4 +89,32 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeOverlay();
   });
+
+  // Inicializa lightbox dentro del overlay
+  function initOverlayLightbox() {
+    const overlay = document.getElementById('project-overlay');
+    const gallery = overlay.querySelector('.highlight-gallery');
+    if (!gallery) return;
+
+    // Evitar duplicar
+    if (overlay.querySelector('#lightbox')) return;
+
+    overlayContent.appendChild(lightbox);
+
+    gallery.querySelectorAll('img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightbox.innerHTML = `<img src="${img.src}" alt="Vista ampliada">`;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  }
+
+  // Llamar cada vez que se cargue un proyecto
+  document.addEventListener('projectLoaded', initOverlayLightbox);
+
+
 });

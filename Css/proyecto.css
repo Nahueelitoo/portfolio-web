@@ -46,8 +46,28 @@ h1 { font-size: 2.2rem; color: var(--accent); margin: 0 0 0.25rem; }
 .btn { display:inline-block; padding: .6rem .9rem; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; }
 .btn.ghost { background: transparent; border:1px solid rgba(200,170,255,0.12); color:var(--muted); }
 
-.gallery {
+/* === SECCIÓN DE IMÁGENES DESTACADAS === */
+.highlight-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* imágenes más grandes */
+  gap: 1.5rem;
+  justify-items: center;
   margin-top: 2rem;
+}
+
+.highlight-gallery img {
+  width: 100%;
+  height: 230px; /* Altura fija para que sean uniformes */
+  object-fit: cover; /* mantiene proporciones y recorta bordes si es necesario */
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.highlight-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(187, 134, 252, 0.5);
 }
 
 .grid {
@@ -83,4 +103,35 @@ section {
 
 section:last-of-type {
   border: none;
+}
+
+/* === LIGHTBOX === */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 0, 30, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(200, 150, 255, 0.6);
+  transition: transform 0.3s ease;
+}
+
+#lightbox.active img {
+  transform: scale(1.05);
 }
