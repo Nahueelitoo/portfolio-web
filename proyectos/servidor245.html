@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servidor 245 | Nahuel Inguanta</title>
-  <link rel="stylesheet" href="css/servidor245.css" />
+  <link rel="stylesheet" href="/Css/proyecto.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Servidor 245 — Caso</title>
+  <!-- No es estrictamente necesario enlazar css global; el overlay ya tiene estilos.
+       Pero podemos usar un CSS específico para proyectos. -->  
 </head>
 <body>
-  <a href="./index.html">&larr; Volver al portafolio</a>
-  <h1>Servidor 245</h1>
-  <p><strong>Tipo:</strong> Migración de servidor local</p>
-  <p><strong>Descripción:</strong> Actualización completa del entorno de servidor Windows XP a 10.</p>
-  <p><strong>Tecnologías:</strong> PHP, MySQL, Apache, XAMPP, HTML/CSS/JS</p>
-  <p><strong>Aporte:</strong> Mejora en estabilidad, rendimiento e interfaz moderna.</p>
-  <p><strong>Link:</strong> Interno.</p>
-  <footer>
-    © 2025 Nahuel Inguanta & ChatGPT - Todos los derechos reservados.
-  </footer>
+  <main class="project-page">
+    <header class="project-hero">
+      <div class="hero-left">
+        <h1>Servidor 245</h1>
+        <p class="subtitle">Servidor local / GLPI actualizado.</p>
+        <p class="lead">Migración de servidor antiguo a uno moderno mejorando rendimiento e interfaz.
+        </p>
+        <div class="meta">
+          <span><strong>Tecnologías:</strong>PHP, MySQL, Apache, XAMPP, HTML/CSS/JS</span>
+          <span><strong>Rol:</strong>Mejora en estabilidad, rendimiento e interfaz moderna.</span>
+        </div>
+
+        <div class="links">
+          <a class="btn" href="" target="_blank" rel="noopener">No hay link (Uso Interno)</a>
+          <a class="btn ghost" href="https://github.com/Nahueelitoo/backup_databaseBP" target="_blank" rel="noopener">Repositorio (GitHub)</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="../Images/projects/servidor245/servidor.jpg" alt="Barssaty - captura 1" />
+      </div>
+    </header>
+
+    <section class="highlights">
+      <h2>Capturas destacadas</h2>
+      <div class="highlight-gallery">
+        <img src="../Images/projects/servidor245/glpi.png" alt="captura 1">
+        <img src="../Images/projects/servidor245/bases_de_datos.png" alt="captura 2">
+        <img src="../Images/projects/servidor245/servidor.png" alt="captura 3">
+        <img src="../Images/projects/servidor245/xampp.png" alt="captura 4">
+        <!-- <img src="" alt="captura 5">
+        <img src="" alt="captura 6"> -->
+      </div>
+    </section>
+
+    <section class="details">
+      <h2>Descripción completa</h2>
+      <p>Esta empresa tenía varias bases de datos y un sistema en un servidor antiguo en Windows XP, el cuál tenía ya más de 10 años desactualizado tanto en SQL
+        como en otros programas que utilizaba el mismo servidor. Se realizó una actualización completa tanto de todo el servidor como del GLPI, los cuales contienen
+        mucha información, además de información importante y muy relevante.
+      </p>
+      <p>Se pasó por muchas etapas de migración de datos, actualización de datos (en el caso de PHP, hubo que actualizar aproximadamente 500 archivos PHP), de los cuales
+        la sintáxis mysql_connect no funcionaba más, y había que cambiar a mysqli_connect (por tema de versión PHP), y otros cambios más, que se fueron haciendo en un lapso
+        de 3 meses, el cuál duró toda la migración completa. Tengase en cuenta que el GLPI pasó por el mismo trabajo y actualización desde una versión precaria a la penúltima
+        versión que tiene GLPI hoy en día.
+      </p>
+      <p>Este servidor contiene un diario de reportes y generación de tickets con su base operativa. Otra base con generación de etiquetas para pedidos en dos salones (Moreno y La Plata)
+        Entre muchas otras funcionalidades más, como impresión de remitos, generación de tickets para soporte, etc.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
